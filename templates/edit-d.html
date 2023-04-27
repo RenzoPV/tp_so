@@ -1,0 +1,30 @@
+{% extends 'layout.html' %}
+{% block body %}
+
+<div class="card" id="centrado">
+    <form action="/actualizardesahuciado/{{d.0}}" method="POST">
+        <div class="form-group">
+            <input type="text" name="1" placeholder="Nombre" value="{{d.1}}" class="form-control" />
+        </div>
+        <div class="form-group">
+            <input type="text" name="2" placeholder="Ciudad" value="{{d.2}}" class="form-control" />
+        </div>
+        <div class="form-group">
+            <input type="number" name="3" placeholder="Telefono" value="{{d.3}}" class="form-control" />
+        </div>
+        <div class="form-group">
+            <input type="number" name="4" placeholder="Edad" value="{{d.4}}" class="form-control" />
+        </div>
+        <div class="form-group">
+            <input type="text" name="5" placeholder="Distrito" value="{{d.5}}" class="form-control" />
+        </div>
+        <div class="form-group">
+            <input type="text" name="6" placeholder="Sexo" value="{{d.6}}" class="form-control" />
+        </div>
+        <div class="form-group">
+            <button type="submit" class="btn btn-info">Save</button>
+        </div>
+    </form>
+</div>
+
+{% endblock %}

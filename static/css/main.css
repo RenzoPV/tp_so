@@ -1,0 +1,61 @@
+thead{
+    font-weight: bold;
+}
+#tabla1,#tabla2{
+    display: none;
+    margin-bottom: 30px;
+}
+table{
+    text-align: center;
+}
+.title{
+    text-align: center;
+    font-size: 35px;
+    font-weight: bold;
+    margin-top: 30px;
+    margin-bottom: 30px;
+}
+.butt{
+    display: flex;
+    margin-left: auto;
+    margin-right: auto;
+    margin-bottom: 30px;
+}
+hr{
+    border-color: black;
+    border-style: dashed;
+    border-width: 4px;
+    margin-top: 60px;
+}
+.card{
+    width: 30%;
+    display: flex;
+    margin-left: auto;
+    margin-right: auto;
+    background-color: rgb(185, 185, 185);
+}
+form{
+    width: 80%;
+    display: flex;
+    flex-direction: column;
+    margin-left: auto;
+    margin-right: auto;
+    gap:10px;
+}
+#centrado{
+    margin-top: 15%;
+    padding-top: 30px;
+}
+body {
+    background: #ccd22d;
+    background: -webkit-linear-gradient(
+      to right,
+      #b9f318,
+      #e0eb4b
+    );
+    background: linear-gradient(
+      to right,
+      #4cff67,
+      #e0eb4b
+    );
+}

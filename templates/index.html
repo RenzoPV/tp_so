@@ -1,0 +1,117 @@
+{% extends 'layout.html' %}
+{% block body %}
+<h1 class="title">Albergues</h1>
+<button id="but1" type="button" class="butt btn btn-primary" onclick="mostrar1()">Agregar</button>
+<div class="card" id="tabla1">
+    <div>
+        <br>
+        <form action="/albergues" method="POST">
+            <div class="form-group">
+                <input type="text" name="1" placeholder="Albergue" class="form-control" />
+            </div>
+            <div class="form-group">
+                <input type="text" name="2" placeholder="Ciudad" class="form-control" />
+            </div>
+            <div class="form-group">
+                <input type="text" name="3" placeholder="Direccion" class="form-control" />
+            </div>
+            <div class="form-group">
+                <input type="number" name="4" placeholder="Telefono" class="form-control" />
+            </div>
+            <div class="form-group">
+                <input type="text" name="5" placeholder="Disponibilidad" class="form-control" />
+            </div>
+            <div class="form-group">
+                <button type="submit" class="btn btn-info" onclick="cerrar1()">Guardar</button>
+            </div>
+    
+        </form>
+    </div>
+</div>
+<table class="table table-striped">
+    <thead>
+        <tr>
+            <td>Albergue</td>
+            <td>Ciudad</td>
+            <td>Direccion</td>
+            <td>Telefono</td>
+            <td>Disponibilidad</td>
+            <td></td>
+            <td></td>
+        </tr>
+    </thead>
+    <tbody>
+        {% for a in als %}
+        <tr>
+            <td>{{a.1}}</td>
+            <td>{{a.2}}</td>
+            <td>{{a.3}}</td>
+            <td>{{a.4}}</td>
+            <td>{{a.5}}</td>
+            <td><a href="/editalbergue/{{a.0}}"><button class="btn btn-success">Editar</button></a></td>
+            <td><a href="/eliminaralbergue/{{a.0}}"><button class="btn btn-danger">Eliminar</button></a></td>
+        </tr>
+        {% endfor %}
+    </tbody>
+</table>
+<hr>
+<h1 class="title">Desahuciados</h1>
+<button id="but2" type="button" class="butt btn btn-primary" onclick="mostrar2()">Agregar</button>
+<div class="card" id="tabla2">
+    <div>
+        <br>
+        <form action="/desahuciados" method="POST">
+            <div class="form-group">
+                <input type="text" name="1" placeholder="Nombre" class="form-control" />
+            </div>
+            <div class="form-group">
+                <input type="text" name="2" placeholder="Ciudad" class="form-control" />
+            </div>
+            <div class="form-group">
+                <input type="number" name="3" placeholder="Telefono" class="form-control" />
+            </div>
+            <div class="form-group">
+                <input type="number" name="4" placeholder="Edad" class="form-control" />
+            </div>
+            <div class="form-group">
+                <input type="text" name="5" placeholder="Distrito" class="form-control" />
+            </div>
+            <div class="form-group">
+                <input type="text" name="6" placeholder="Sexo" class="form-control" />
+            </div>
+            <div class="form-group">
+                <button type="submit" class="btn btn-primary btn-block" onclick="cerrar1()">Save</button>
+            </div>
+        </form>
+    </div>
+</div>
+<table  class="table table-striped">
+    <thead>
+        <tr>
+            <td>Nombre</td>
+            <td>Ciudad</td>
+            <td>Telefono</td>
+            <td>Edad</td>
+            <td>Distrito</td>
+            <td>Sexo</td>
+            <td></td>
+            <td></td>
+        </tr>
+    </thead>
+    <tbody>
+        {% for d in ds %}
+        <tr>
+            <td>{{d.1}}</td>
+            <td>{{d.2}}</td>
+            <td>{{d.3}}</td>
+            <td>{{d.4}}</td>
+            <td>{{d.5}}</td>
+            <td>{{d.6}}</td>
+            <td><a href="/editdesahuciado/{{d.0}}"><button class="btn btn-success">Editar</button></a></td>
+            <td><a href="/eliminardesahuciado/{{d.0}}"><button class="btn btn-danger">Eliminar</button></a></td>
+        </tr>
+        {% endfor %}
+    </tbody>
+</table>
+    
+{% endblock %}
